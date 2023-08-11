@@ -19,6 +19,10 @@ int main(void)
 				{
 					continue;
 				}
+				if (n > m && n > l)
+				{
+					continue;
+				}
 				putchar(n);
 				putchar(m);
 				putchar(l);
