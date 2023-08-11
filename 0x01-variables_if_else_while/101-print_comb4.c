@@ -15,6 +15,10 @@ int main(void)
 		{
 			for (l = 50; l <= 57; l++)
 			{
+				if (n < m && m > l)
+				{
+					continue;
+				}
 				putchar(n);
 				putchar(m);
 				putchar(l);
