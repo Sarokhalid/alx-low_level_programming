@@ -20,6 +20,7 @@ int main(void)
 				{
 					putchar(n);
 					putchar(m);
+					putchar(' ');
 					putchar(l);
 					putchar(p);
 					putchar(',');
