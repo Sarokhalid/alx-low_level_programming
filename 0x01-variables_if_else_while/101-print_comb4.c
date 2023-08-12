@@ -24,15 +24,11 @@ int main(void)
 					continue;
 				}
 				if (n >= m && m >= l)
-				{
-					continue
-						;
-				}
+					continue;
 				if (n > m && m < l)
 					continue;
 				if (n == m || m == l || n == l)
-				{	continue;
-				}
+					continue;
 				putchar(n);
 				putchar(m);
 				putchar(l);
