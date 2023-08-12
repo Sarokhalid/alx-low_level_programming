@@ -27,12 +27,8 @@ int main(void)
 				{
 					continue;
 				}
-				if (n == m)
+				if (n == m || m == l)
 				{	continue;
-				}
-				if (m == l)
-				{
-					continue;
 				}
 				putchar(n);
 				putchar(m);
