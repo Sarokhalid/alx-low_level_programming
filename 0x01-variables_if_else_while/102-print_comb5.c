@@ -5,10 +5,7 @@
  */
 int main(void)
 {
-	int n;
-	int m;
-	int l;
-	int p;
+	int n, m, l, p;
 
 	for (n = 45; n <= 9; n++)
 	{
