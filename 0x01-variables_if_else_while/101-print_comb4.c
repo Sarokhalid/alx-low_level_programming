@@ -9,9 +9,9 @@ int main(void)
 	int m;
 	int l;
 
-	for (n = 48; n <= 57; n++)
+	for (n = 48; n <= 55; n++)
 	{
-		for (m = 49; m <= 57; m++)
+		for (m = 49; m <= 56; m++)
 		{
 			for (l = 50; l <= 57; l++)
 			{
@@ -29,10 +29,6 @@ int main(void)
 				}
 				if (n == m || m == l)
 				{	continue;
-				}
-				if (n == m && m == l)
-				{
-					continue;
 				}
 				putchar(n);
 				putchar(m);
