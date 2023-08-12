@@ -30,6 +30,10 @@ int main(void)
 				if (n == m || m == l)
 				{	continue;
 				}
+				if (n == m && m == l)
+				{
+					continue;
+				}
 				putchar(n);
 				putchar(m);
 				putchar(l);
