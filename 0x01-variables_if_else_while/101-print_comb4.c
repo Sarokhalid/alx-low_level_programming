@@ -27,6 +27,13 @@ int main(void)
 				{
 					continue;
 				}
+				if (n == m)
+				{	continue;
+				}
+				if (m == l)
+				{
+					continue;
+				}
 				putchar(n);
 				putchar(m);
 				putchar(l);
