@@ -23,8 +23,6 @@ int main(void)
 				{
 					continue;
 				}
-				if (n >= m && m >= l)
-					continue;
 				if (n > m && m < l)
 					continue;
 				if (n == m || m == l || n == l)
