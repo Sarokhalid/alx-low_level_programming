@@ -11,19 +11,19 @@ int main(void)
 	{
 		for (m = 45; m <= 9; m++)
 		{
-			for (l = 45; l <= 9; l++)
-			{
-				for (p = 46; p <= 9; p++)
-				{
-					putchar(n);
-					putchar(m);
-					putchar(' ');
-					putchar(l);
-					putchar(p);
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar(n);
+			putchar(l);
+			putchar(',');
+		}
+	}
+	for (l = 45; l <= 9; l++)
+	{
+		for (p = 46; p <= 9; p++)
+		{
+			putchar(l);
+			putchar(p);
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
