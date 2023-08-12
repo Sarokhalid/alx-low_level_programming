@@ -27,13 +27,13 @@ int main(void)
 				{
 					continue;
 				}
-				if (n == m || m == l || n == l)
+				if (n == m || m == l || n == l || n == m == l)
 				{	continue;
 				}
 				putchar(n);
 				putchar(m);
 				putchar(l);
-				if (n == 55 && m == 56 && l == 57 || m == l ==n)
+				if (n == 55 && m == 56 && l == 57)
 				{
 					continue;
 				}
