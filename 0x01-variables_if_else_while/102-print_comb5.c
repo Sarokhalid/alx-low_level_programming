@@ -22,9 +22,12 @@ int main(void)
 					putchar(m);
 					putchar(l);
 					putchar(p);
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
 	}
+	putchar('\n')
 	return (0);
 }
