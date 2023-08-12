@@ -19,11 +19,11 @@ int main(void)
 				{
 					continue;
 				}
-				if (n > m && n > l)
+				if (n >= m && n >= l)
 				{
 					continue;
 				}
-				if (n > m && m > l)
+				if (n >= m && m >= l)
 				{
 					continue;
 				}
