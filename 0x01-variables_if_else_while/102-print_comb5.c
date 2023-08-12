@@ -10,13 +10,13 @@ int main(void)
 	int l;
 	int p;
 
-	for (n == 45; n <= 9; n++)
+	for (n = 45; n <= 9; n++)
 	{
-		for (m == 45; m <= 9; m++)
+		for (m = 45; m <= 9; m++)
 		{
-			for (l == 45; l <= 9; l++)
+			for (l = 45; l <= 9; l++)
 			{
-				for (p == 46; p <= 9; p++)
+				for (p = 46; p <= 9; p++)
 				{
 					putchar(n);
 					putchar(m);
