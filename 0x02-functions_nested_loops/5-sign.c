@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_sign - print sing + or -
- * @n: number  in Ascci code
+ * @n: number in Ascci code
  * Return: 1 if n pisitive . 0 if n zero . -1 if negetiv
  */
 int print_sign(int n)
