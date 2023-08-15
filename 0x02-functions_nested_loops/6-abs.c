@@ -1,9 +1,9 @@
 #include "main.h"
- /**
-  * _abs - compute absulute value for an integer
-  * @i: input number as userinput
-  * Return: absolute value
-  */
+/**
+ * _abs - compute the absulate value
+ * @i: input number
+ * Return: absulate value
+ */
 int _abs(int i)
 {
 	if (i >= 0)
