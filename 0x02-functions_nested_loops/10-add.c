@@ -12,4 +12,3 @@ int add(int i, int j)
 	m = i + j;
 	_putchar(m);
 }
-
