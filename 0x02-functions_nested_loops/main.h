@@ -7,3 +7,4 @@ int print_sign(int n);
 int _abs(int);
 void print_to_98(int n);
 int print_last_digit(int);
+int add(int, int);
