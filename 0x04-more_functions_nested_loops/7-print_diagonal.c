@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- * print_diagonal - print in digonal \
- * @n: number of times of characters
- * Return: void
+ * print_diagonal - print digonal with #
+ * @n: integer number of times
  */
 void print_diagonal(int n)
 {
