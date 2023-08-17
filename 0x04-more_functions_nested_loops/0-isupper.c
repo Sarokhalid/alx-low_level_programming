@@ -7,7 +7,7 @@
 int _isupper(int c)
 {
 	if (c >= 65 && c <= 90)
-	{	_putchar(c);
+	{	_putchar('c');
 		c++;
 		return (1);
 	}
