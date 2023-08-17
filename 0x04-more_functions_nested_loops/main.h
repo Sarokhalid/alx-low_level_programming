@@ -1,3 +1,4 @@
+int _putchar(char c);
 void print_square(int size);
 void print_diagonal(int n);
 void print_line(int n);
@@ -6,7 +7,6 @@ void print_most_numbers(void);
 int mul(int a, int b);
 int _isdigit(int c);
 int _isupper(int c);
-int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
 int _islower(int c);
