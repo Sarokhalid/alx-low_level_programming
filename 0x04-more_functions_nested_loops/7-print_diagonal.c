@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_diagonal - print in digonal \
- * @n: number input
+ * @n:number input
  */
 void print_diagonal(int n)
 {
