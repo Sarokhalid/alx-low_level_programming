@@ -1,7 +1,8 @@
 #include "main.h"
 /**
  * print_diagonal - print in digonal \
- * @n:number input
+ * @n: number of times of characters
+ * Return: void
  */
 void print_diagonal(int n)
 {
