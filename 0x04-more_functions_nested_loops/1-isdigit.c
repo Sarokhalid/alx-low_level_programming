@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _isdigit - chech digit
- * @c: c is char 
+ * @c: c is char
  * Return: 1 if c is digit. 0 if not
  */
 int _isdigit(int c)
