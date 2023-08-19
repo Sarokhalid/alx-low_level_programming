@@ -5,14 +5,15 @@
  */
 void print_number(int n)
 {
-	if (n < '0')
+	unsigned int f;
+	if (n < 0)
 	{
+		f = -n;
 		_putchar('-');
-		_putchar(n);
 	}
-	else if (n > '0')
-		_putchar('n');
 	else
-		_putchar('0');
-	_putchar('\n');
+		f = n;
+	if (f / 10)
+		print_number(f / 10);
+	_putchar((f % 10) + '0');
 }
