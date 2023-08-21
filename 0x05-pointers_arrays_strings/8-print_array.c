@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 /**
  * print_array - print array
  * @a: character of parameter
@@ -15,5 +15,5 @@ void print_array(int *a, int n)
 		else
 			printf("%d", a[i]);
 	}
-	_putchar('\n');
+	printf("\n");
 }
