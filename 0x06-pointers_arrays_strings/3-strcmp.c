@@ -1,7 +1,10 @@
 #include "main.h"
-
-
-
+/**
+ * _strcmp - compare
+ * @s1: string of cgar
+ * @s2: string of char
+ * Return: value
+ */
 int _strcmp(char *s1, char *s2)
 {
 	int q = 0;
