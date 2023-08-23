@@ -1,8 +1,11 @@
 #include "main.h"
-
-
-
-
+/**
+ * *_strncpy - copy
+ * @dest: string
+ * @src: string
+ * @n: byte
+ * Return: value
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
 	int y;
