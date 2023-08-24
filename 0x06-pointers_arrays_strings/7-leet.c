@@ -15,7 +15,9 @@ char *leet(char *n)
 		for (j = 0; j < 10; j++)
 		{
 			if (n[i] == w1[j])
+			{
 				n[i] = w2[j];
+			}
 		}
 	}
 	return (n);
