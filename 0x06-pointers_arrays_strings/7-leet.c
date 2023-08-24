@@ -1,10 +1,10 @@
 #include "main h"
 /**
  * leet - encoding
- * @c: string
+ * @n: string
  * Return: value
  */
-char *leet(char *c)
+char *leet(char *n)
 {
 	int i, j;
 	char w1[] = "aAeEoOtTlL";
