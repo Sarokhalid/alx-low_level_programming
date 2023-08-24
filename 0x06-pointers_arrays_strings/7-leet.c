@@ -2,7 +2,7 @@
 /**
  * leet - encoding
  * @n: string
- * Return: value
+ * Return: n value
  */
 char *leet(char *n)
 {
