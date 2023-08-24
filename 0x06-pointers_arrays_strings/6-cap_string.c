@@ -6,21 +6,30 @@
  */
 char *cap_string(char *s)
 {
-	char *p = s;
-	int d = 1;
+	int i = 0;
 
-	while (*s)
+	while (s[i])
 	{
-		if (is Delimiter(*s))
-			d = 1;
-		else if (isLower(*s) && d)
-		{
-			*s = 32;
-			d = 0;
-		}
-		else
-			d = 0;
-		s++
+		while ((s[i] >= 'a' && s[i] <= 'z'))
+			i++;
+
+		if (s[i - 1] == ' ' ||
+		s[i - 1] == '\t' ||
+		s[i - 1] == '\n' ||
+		s[i - 1] == ',' ||
+		s[i - 1] == ';' ||
+		s[i - 1] == '.' ||
+		s[i - 1] == '!' ||
+		s[i - 1] == '?' ||
+		s[i - 1] == '"' ||
+		s[i - 1] == '(' ||
+		s[i - 1] == ')' ||
+		s[i - 1] == '{' ||
+		s[i - 1] == '}' ||
+		i == 0)
+			s[i] -= 32;
+		i++;
 	}
-	return (p);
+	return (s);
+}
 }
