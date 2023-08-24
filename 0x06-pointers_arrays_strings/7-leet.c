@@ -6,20 +6,20 @@
  */
 char *leet(char *c)
 {
-	char *p = c;
-	char k[] = {'A', 'E', 'O', 'T', 'L'};
-	int v[] = {4, 3, 0, 7, 1};
-	unsigned int i;
+	int i, j;
+	char w1[] = "aAeEoOtTlL";
+	char w2[] = "4433007711";
 
-	while (*c)
+	for (i = 0; n[i] != 0; i++)
 	{
-		for (i = 0; i < sizeof(k) / sizeof(char); i++)
+		for (j = 0; j < 10; j++)
 		{
-			if (*c == k[i] || *c == k[i] + 32)
-				*c = 48 + v[i];
+			if (n[i] = w1[j]
+			{
+				n[i] = w2[j]
+			}
 		}
-		c++;
 	}
-	return (p);
+	return (n);
 }
 
