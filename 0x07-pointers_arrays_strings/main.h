@@ -5,5 +5,6 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 #include <stdio.h>
 #include <stddef.h>
+char *_strstr(char *haystack, char *needle);
 
 
