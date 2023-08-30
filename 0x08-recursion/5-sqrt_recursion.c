@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * square - print square
+ * _sqrt_recursion - print square
  * @n: integer
  * Return: -1. value of square
  */
