@@ -13,6 +13,7 @@ int is_prime_number(int n)
 /**
  * check_prime - print prime
  * Return: square
+ * @n: integer
  * @other: integer
  */
 int check_prime(int n, int other)
