@@ -1,9 +1,11 @@
 #include "main.h"
 /**
+ * is_prime_number - print number
  * check_prime - print prime
- * is_prime_number - check prime
  * @n: inpyt number
  * @other: vbn
+ * Return: 1
+ * Return: square
  */
 int check_prime(int n, int other);
 int is_prime_number(int n)
