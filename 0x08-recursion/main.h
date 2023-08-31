@@ -1,3 +1,5 @@
+int is_palindrome(char *s);
+
 #include <stdio.h>
 #include <stdlib.h>
 char _putchar(char c);
