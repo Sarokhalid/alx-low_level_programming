@@ -11,9 +11,11 @@ char exw(char *str, int s, int e);
 char **strtow(char *str)
 {
 	int nw, i;
-	int e, s, wi = 0;
+	int e = 0;
+	int s = 0;
+	int wi = 0;
 	char **w;
-
+	
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	nw = cw(str);
@@ -29,13 +31,15 @@ char **strtow(char *str)
 			str++;
 			continue;
 		}
+
 		s = e;
 		while (*str != ' ' && *str != '\0')
 		{
-			e--;
+			e++;
 			str++;
 		}
 		w[wi] = exw(str, s, e);
+
 		if (w[wi] == NULL)
 		{
 			for (i = 0; i < wi; i++)
@@ -45,7 +49,7 @@ char **strtow(char *str)
 		}
 		wi++;
 	}
-	w[wi] == NULL;
+	w[wi] = NULL;
 	return (w);
 }
 /**
@@ -64,7 +68,7 @@ int cw(char *str)
 			ws = 0;
 		else if (ws == 0)
 		{
-			ws == 1;
+			ws = 1;
 			c++;
 		}
 		str++;
@@ -81,14 +85,15 @@ int cw(char *str)
 char exw(char *str, int s, int e)
 {
 	int l;
-	char *w;
+	char *r;
 
 	l = e - s;
-	w = (char *)malloc(sizeof(char) * (l + 1));
-	if (w == NULL)
+	r = (char *)malloc(sizeof(char) * (l + 1));
+
+	if (r == NULL)
 		return (NULL);
-	strncpy(w, &str[s], l);
-	w[l] = '\0';
-	return (w);
+	strncpy(r, &str[s], l);
+	r[l] = '\0';
+	return (r);
 }
 
