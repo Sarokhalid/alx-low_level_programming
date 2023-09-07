@@ -9,11 +9,19 @@
 void *malloc_checked(unsigned int b)
 {
 	void *p;
+	const char *c;
+	const char *em;
 
 	p = malloc(b);
 	if (p == NULL)
 	{
-		fprintf(stderr, "failed to allocate memory\n");
+		em = "faild to allocate memory \n";
+		c = em;
+		while (*c != '\0')
+		{
+			_putchar(*c);
+			c++;
+		}
 		exit(98);
 	}
 	return (p);
