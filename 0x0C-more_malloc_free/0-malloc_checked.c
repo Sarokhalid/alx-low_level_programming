@@ -1,6 +1,6 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
  * *malloc_checked - bvcxxx
  * @b: jbccx
@@ -9,18 +9,18 @@
 void *malloc_checked(unsigned int b)
 {
 	void *p;
-	const char *c;
+	const char *x;
 	const char *em;
 
 	p = malloc(b);
 	if (p == NULL)
 	{
 		em = "faild to allocate memory \n";
-		c = em;
-		while (*c != '\0')
+		x = em;
+		while (*x != '\0')
 		{
-			_putchar(*c);
-			c++;
+			_putchar(*x);
+			x++;
 		}
 		exit(98);
 	}
