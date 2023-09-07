@@ -4,6 +4,7 @@
 /**
  * *malloc_checked - bvcxxx
  * @b: jbccx
+ * Return: p value
  */
 void *malloc_checked(unsigned int b)
 {
