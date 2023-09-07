@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * *malloc_checked - bvcxxx
- * @b: jbccx
+ * *malloc_checked - allocate memory
+ * @b: bytes
  * Return: p value
  */
 void *malloc_checked(unsigned int b)
@@ -13,7 +13,6 @@ void *malloc_checked(unsigned int b)
 	p = malloc(b);
 	if (p == NULL)
 	{
-		fprintf(stderr, "fail to allocat");
 		exit(98);
 	}
 	return (p);
