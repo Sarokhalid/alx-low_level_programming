@@ -13,8 +13,7 @@ void *malloc_checked(unsigned int b)
 	p = malloc(b);
 	if (p == NULL)
 	{
-		_putchar('E');
-		_putchar('\n');
+		fprintf(stderr, "fail to allocat");
 		exit(98);
 	}
 	return (p);
