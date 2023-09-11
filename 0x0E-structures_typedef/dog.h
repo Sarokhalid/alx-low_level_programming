@@ -1,6 +1,18 @@
 #ifndef DOOGS_H
 #define DOOGS_H
 /**
+ * struct dog - jgfdsz
+ * @name: nvcx
+ * @age: vcxx
+ * @owner: jgcxz
+ */
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
+/**
  * struct dog - Represent dog with its name,age  and owner
  * @name: name of dog
  * @age : age of dog
