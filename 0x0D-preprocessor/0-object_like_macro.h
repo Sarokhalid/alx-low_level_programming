@@ -1,4 +1,4 @@
-#ifndef OBJECT_LIKE_MACRO_H
-#define OBJECT_LIKE_MACRO_H
+#ifndef BROJECT_LIKE_MACRO_H
+#define BROJECT_LIKE_MACRO_H
 #define SIZE 1024
-#endif /* DOG_H */
+#endif
