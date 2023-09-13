@@ -16,14 +16,14 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	int i = 0;
+	int fo;
 
-	while (ops[i].op != NULL)
+	while (!fo && ops[i].op != NULL)
 	{
-		if (*(ops[i].op) == *s && *(s + 1) == '\0') 
-			return (ops[i].f);
+		fo = (*(ops[i].op) == *s && *(s + 1) == '\0');
 		i++;
 	}
-	return (NULL);
+	return (fo ? ops[i - 1].f : NULL);
 }
 	
 
