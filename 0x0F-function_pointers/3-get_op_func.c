@@ -25,5 +25,3 @@ int (*get_op_func(char *s))(int, int)
 	}
 	return (fo ? ops[i - 1].f : NULL);
 }
-	
-
