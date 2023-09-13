@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n"), exit(98);
 	}
-	
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
