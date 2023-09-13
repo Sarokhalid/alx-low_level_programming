@@ -13,13 +13,18 @@ void print_name(char *name, void (*f)(char *))
 	f(name);
 }
 /**
- * pname - jgfxx
- * @name: jhgfcxx
+ * _putchar - jgfxx
+ * @c:  jhgfcxx
+ * Return: integer
  */
 int _putchar(char c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }
+/**
+ * pname - bbcxxzz
+ * @name: jhcxx
+ */
 void pname(char *name)
 {
 	if (name == NULL)
