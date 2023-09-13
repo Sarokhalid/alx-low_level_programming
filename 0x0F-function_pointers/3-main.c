@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
 		_putchar('o');
 		_putchar('r');
 		_putchar('\n');
+		return (98);
 	}
 	n = atoi(argv[1]);
 	m = atoi(argv[3]);
@@ -44,6 +45,7 @@ int main(int argc, char *argv[])
 		_putchar('o');
 		_putchar('r');
 		_putchar('\n');
+		return (99);
 	}
 	if ((*argv[2] == '/' || *argv[2] == '%') && m == 0)
 	{
@@ -53,6 +55,7 @@ int main(int argc, char *argv[])
 		_putchar('o');
 		_putchar('r');
 		_putchar('\n');
+		return (100);
 	}
 	r = op_f(n, m);
 	printf("%d\n", r);
