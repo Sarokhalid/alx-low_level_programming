@@ -27,17 +27,17 @@ void print_all(const char * const format, ...)
 		if (format[in]  == 'c')
 		{
 			c = (char)va_arg(all, int);
-			printf("%c", c);
+			printf("%c, ", c);
 		}
 		else if (format[in] == 'i')
 		{
 			i = va_arg(all, int);
-			printf("%d", i);
+			printf("%d, ", i);
 		}
 		else if (format[in] == 'f')
 		{
 			f = (float)va_arg(all, double);
-			printf("%f", f);
+			printf("%f, ", f);
 		}
 		else if (format[in] == 's')
 		{
