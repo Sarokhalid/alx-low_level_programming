@@ -10,8 +10,8 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int nb;
-	unsigned char *ptr;
 
+	void op(int nb);
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -23,10 +23,20 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (2);
 	}
-	ptr = (unsigned char *)main;
-	for (i = 0; i < nb; i++)
-		printf("%02x", ptr[i]);
-	printf("\n");
+	op(nb);
 	return (0);
 }
+void op(int nb)
+{
+	unsigned char *st;
+	unsigned char *en;
 
+	st = (unsigned char *)op;
+	en = st + nb;
+	while (st < en)
+	{
+		printf("%02x", *st);
+		st++;
+	}
+	printf("\n");
+}
