@@ -9,39 +9,39 @@
 void print_all(const char * const format, ...)
 {
 	va_list all;
-	double numbe;
+	float f;
+	int in = 0;
 	char c;
-	int numb;
+	int i;
 	char *s;
-	const char *p;
-	
-	p = format;
+
 	va_start(all, format);
-	while (*p != '\0')
+	while (format && format[in])
 	{
-		if (*p == 'c')
+		if (format[in]  == 'c')
 		{
 			c = (char)va_arg(all, int);
 			printf("%c", c);
-		else if (*p == 'i')
-		{
-			numb = va_arg(all, int);
-			printf("%d, ", numb);
 		}
-		else if (*p == 'f')
+		else if (format[in] == 'i')
 		{
-			numbe = (float)va_arg(all, double);
-			printf("%f", numbe);
+			i = va_arg(all, int);
+			printf("%d", i);
 		}
-		else if (*p == 's')
+		else if (format[in] == 'f')
+		{
+			f = (float)va_arg(all, double);
+			printf("%f", f);
+		}
+		else if (format[in] == 's')
 		{
 			s = va_arg(all, char *);
-			if (s != NULL)
-				printf("%s", s);
-			else
+			if (s ==  NULL)
 				printf("(nil)");
+			else
+				printf("%s", s);
 		}
-		p++;
+		in++;
 	}
 	va_end(all);
 	printf("\n");
