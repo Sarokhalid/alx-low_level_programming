@@ -1,54 +1,46 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include "variadic_functions.h"
 /**
- * print_all - hfdd
- * @format: jggf
- * @...: bhfc
- * @c: jgvc
- * @f: bbvc
- * @i: nbvc
- * @s: bvvc
- * @in: hgvc
- * Description: jvcxxxzzzbbbbcxzzz
+ * print_all - hvcxx
+ * @format: bvcxx
  */
 void print_all(const char * const format, ...)
 {
+	int i = 0;
+	char *sr, *sep = "";
 	va_list all;
-	float f;
-	int in = 0;
-	char c;
-	int i;
-	char *s;
 
 	va_start(all, format);
-	while (format && format[in])
+	if (format)
 	{
-		if (format[in]  == 'c')
+		while (format[i])
 		{
-			c = (char)va_arg(all, int);
-			printf("%c, ", c);
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(all, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(all, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(all, double));
+					break;
+				case 's':
+					sr = va_arg(all, char *);
+					if (!sr)
+						sr = "(nil)";
+					printf("%s%s", sep, sr);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
 		}
-		else if (format[in] == 'i')
-		{
-			i = va_arg(all, int);
-			printf("%d, ", i);
-		}
-		else if (format[in] == 'f')
-		{
-			f = (float)va_arg(all, double);
-			printf("%f, ", f);
-		}
-		else if (format[in] == 's')
-		{
-			s = va_arg(all, char *);
-			if (s ==  NULL)
-				printf("(nil)");
-			else
-				printf("%s", s);
-		}
-		in++;
 	}
-	va_end(all);
-	printf("\n");
+		printf("\n");
+		va_end(all);
 }
