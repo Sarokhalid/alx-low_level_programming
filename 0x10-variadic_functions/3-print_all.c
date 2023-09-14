@@ -5,6 +5,12 @@
  * print_all - hfdd
  * @format: jggf
  * @...: bhfc
+ * @c: jgvc
+ * @f: bbvc
+ * @i: nbvc
+ * @s: bvvc
+ * @in: hgvc
+ * Description: jvcxxxzzzbbbbcxzzz
  */
 void print_all(const char * const format, ...)
 {
