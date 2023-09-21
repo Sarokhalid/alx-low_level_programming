@@ -1,4 +1,9 @@
 #include "lists.h"
+/**
+ * print_list - hgfd
+ * @h: bvc
+ * Return: bgfc
+ */
 size_t print_list(const list_t *h)
 {
 	size_t c = 0;
