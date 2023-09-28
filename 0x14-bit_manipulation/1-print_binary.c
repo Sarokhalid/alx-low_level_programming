@@ -1,14 +1,5 @@
 #include "main.h"
 /**
- * _putchar - bgfxx
- * @c: bvvc
- * Return: jvcc
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
  * print_binary - hgfdd
  * @n: jhggcc
  */
