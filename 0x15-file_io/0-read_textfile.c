@@ -10,6 +10,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *file = fopen(filename, "r");
 	ssize_t br, bw;
 	long fs;
+	char *buf;
 
 	if (filename == NULL)
 		return (-1);
@@ -34,7 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (bw != br)
 	{
 		free(buf);
-		fclose(filel;
+		fclose(file);
 		return (-1);
 	}
 	free(buf);
