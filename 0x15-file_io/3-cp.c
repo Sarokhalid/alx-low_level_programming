@@ -21,7 +21,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, USAGE), exit(97);
 	from_fd = open(av[1], O_RDONLY);
 	if (from_fd == -1)
-			dprintf(STDERR_FILENO, ERR_NOREDA, av[1]), exit(98);
+		dprintf(STDERR_FILENO, ERR_NOREDA, av[1]), exit(98);
 	to_fd = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (to_fd == -1)
 		dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
