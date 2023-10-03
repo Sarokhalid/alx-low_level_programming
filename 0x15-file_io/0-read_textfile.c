@@ -1,44 +1,43 @@
 #include "main.h"
 /**
- * read_textfile - bvccxx
- * @filename: nbvcc
- * @letters: nbvvc
- * Return: ngffdd
+ * read_textfile - hgfd
+ * @filename: hhgffd
+ * @letters: hgfxx
+ * Return: jgddd
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file = fopen(filename, "r");
-	ssize_t br, bw;
-	long fs;
-	char *buf;
+	FILE *file;
+	ssize_t nr, nw;
+	char *buffer;
 
 	if (filename == NULL)
-		return (-1);
-	fseek(file, 0, SEEK_END);
-	fs = ftell(file);
-	rewind(file);
-	buf = (char *)malloc(fs * sizeof(char));
-	if (buf == NULL)
+		return (0);
+	file = fopen(filename, "r");
+	if (file == NULL)
+		return (0);
+	buffer = (char *)malloc((letters + 1) * sizeof(char));
+	if (buffer == NULL)
 	{
 		fclose(file);
-		return (-1);
+		return (0);
 	}
-	br = fread(buf, sizeof(char), fs, file);
-	if (br <= fs)
+	nr = fread(buffer, sizeof(char), letters, file);
+	if (nr == 0)
 	{
-		free(buf);
+		free(buffer);
 		fclose(file);
-		return (-1);
+		return (0);
 	}
-	bw = fwrite(buf, sizeof(char), br, stdout);
+	buffer[nr] = '\0';
+	nw = fwrite(buffer, sizeof(char), nr, stdout);
+	if (nw != nr)
+	{
+		free(buffer);
+		fclose(file);
+		return (0);
+	}
+	free(buffer);
 	fclose(file);
-	if (bw != br)
-	{
-		free(buf);
-		fclose(file);
-		return (-1);
-	}
-	free(buf);
-	fclose(file);
-	return (1);
+	return (nw);
 }
