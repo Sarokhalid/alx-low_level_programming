@@ -1,72 +1,44 @@
 #include "main.h"
-/**
- * print_error - kjdqdhefh
- * @message: mndjf
- */
-void print_error(const char *message)
-{
-	dprintf(STDERR_FILENO, "Error: %s\n", message);
-}
+#define USAGE "Usage: cp file_from file_to\n"
+#define ERR_NOREDA "Error: Can't read from file %s\n"
+#define ERR_NOWRITE "Error: Can't write to %s\n"
+#define ERR_NOCLOSE "Error: Can't close fd %d\n"
+#define PERMISSIONS (S_IWUSER | S_IWUSER | S_IRGRP | S_IWGRP | S_IROTH)
 /**
  * main - kfjjfhj
- * @argc: jdjhhd
- * @argv: kdjjhfd
+ * @ac: jdjhhd
+ * @av: kdjjhfd
+ * Return: 1 , 0
  */
-int main(int argc, char *argv[])
+int main(int ac, char **av)
 {
-	
-	 const char *file_from = argv[1];
-	 const char *file_to = argv[2];
-	 char buffer[BUFFER_SIZE];
-	 int fd_to, fd_from;
-	 ssize_t br, bw;
+	int from_fd = 0, to_fd = 0;
+	ssize_t b;
+	char buf[READ_BUF_SIZE];
 
-	if (argc != 3)
-	{
-		print_error("Usage: cp file_from file_to");
-		return (97);
-	}
-	fd_from = open(file_from, O_RDONLY);
-	if (fd_from == -1)
+	if (ac != 3)
+		dprintf(STDERR_FILENO, USAGE), exit(97);
+	from_fd = open(av[1], O_RDONLY);
+	if (from_fd == -1)
 	{
 		print_error(strerror(errno));
 		return (98);
 		fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
 		if (fd_to == -1)
-		{
-			print_error(strerror(errno));
-			close(fd_from);
-			return (99);
-		}
-		while ((br = read(fd_from, buffer, BUFFER_SIZE)) > 0)
-		{
-			bw = write(fd_to, buffer, br);
-			if (bw == -1)
-			{
-				print_error(strerror(errno));
-				close(fd_from);
-				close(fd_to);
-				return (99);
-			}
-		}
-		if (br == -1)
-		{
-			print_error(strerror(errno));
-			close(fd_from);
-			close(fd_to);
-			return (99);
-		}
-		if (close(fd_from) == -1)
-		{
-			print_error(strerror(errno));
-			close(fd_to);
-			return (100);
-		}
-		if (close(fd_to) == -1)
-		{
-			print_error(strerror(errno));
-			return (100);
-		}
-	}
-	return (0);
-}
+			dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
+		to_fd = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
+		if (to_fd == -1)
+			dprintf(STDERR_FILENO, ERR_NOWRITE, av[2], exit(99);
+
+		while ((b = read(from_fd, buf, READ_BUF_SIZE)) > 0)
+				if (write(to_fd, buf, b) != b)
+					dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
+		if (b == -1)
+			dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
+		from_fd = close(from_fd);
+		to_fd = close(to_fd);
+		if (from_fd)
+			dprintf(STDERR_FILENO, ERR_NOCLOSE, frpm_fd), exit(100);
+		if (to_fd)
+			dprintf(STDERR_FILENO, ERR_NOCLOSE, from_fd), exit(100);
+		return (EXIT_SUCCESS);
