@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdlib.h>
 #include "lists.h"
 /**
   * delete_dnodeint_at_index - hfffhh
@@ -9,14 +10,12 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	unsigned int count = 0;
-	dlisint_t *current;
+	dlistint_t *current = *head;
 
 	if (*head == NULL)
 	{
 		return (-1);
 	}
-	current = *head;
-
 	if (index == 0)
 	{
 		*head = current->next;
@@ -44,4 +43,3 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	free(current);
 	return (1);
 }
-
